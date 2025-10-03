@@ -4,7 +4,6 @@
 import sys
 import re
 
-
 def print_stats(total_size, status_codes):
     """Print statistics: total file size and status code counts"""
     print(f"File size: {total_size}")
