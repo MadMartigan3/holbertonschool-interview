@@ -53,8 +53,8 @@ def parse_log():
         print_stats(total_size, status_codes)
         raise
 
-    # Print final stats if not already printed
-    if line_count % 10 != 0:
+    # Print final stats if not already printed or if no lines processed
+    if line_count % 10 != 0 or line_count == 0:
         print_stats(total_size, status_codes)
 
 
