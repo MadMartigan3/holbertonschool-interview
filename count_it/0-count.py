@@ -6,7 +6,7 @@ import requests
 
 
 def count_words(subreddit, word_list, word_counts=None,
-                 multipliers=None, after=None):
+                multipliers=None, after=None):
     """
     Recursively queries Reddit API and counts keyword occurrences in hot post
     titles.
@@ -39,7 +39,7 @@ def count_words(subreddit, word_list, word_counts=None,
 
     try:
         response = requests.get(url, headers=headers, params=params,
-                                 allow_redirects=False, timeout=10)
+                                allow_redirects=False, timeout=10)
 
         if response.status_code != 200:
             return
@@ -95,7 +95,7 @@ def print_results(word_counts):
         word_counts (dict): Dictionary of word counts
     """
     filtered_counts = {word: count for word, count in word_counts.items()
-                        if count > 0}
+                    if count > 0}
 
     sorted_words = sorted(filtered_counts.items(), key=lambda x: (-x[1], x[0]))
 
