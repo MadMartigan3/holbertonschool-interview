@@ -95,7 +95,7 @@ def print_results(word_counts):
         word_counts (dict): Dictionary of word counts
     """
     filtered_counts = {word: count for word, count in word_counts.items()
-            if count > 0}
+        if count > 0}
 
     sorted_words = sorted(filtered_counts.items(), key=lambda x: (-x[1], x[0]))
 
